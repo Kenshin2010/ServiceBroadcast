@@ -15,18 +15,19 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".receiver.receiver2.Main5Activity"></activity>
-        <activity android:name=".receiver.receiver1.Main4Activity">
+        <activity android:name=".receiver.receiver3.Main6Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".jobservice.Main3Activity" />
-        <activity android:name=".foreground.Main2Activity">
+        <activity android:name=".receiver.receiver2.Main5Activity" />
+        <activity android:name=".receiver.receiver1.Main4Activity">
 
         </activity>
+        <activity android:name=".jobservice.Main3Activity" />
+        <activity android:name=".foreground.Main2Activity"></activity>
         <activity android:name=".handler.MainActivity" />
 
         <service
@@ -46,8 +47,6 @@
                 <action android:name="com.manroid.serviceex" />
             </intent-filter>
         </receiver>
-
-
     </application>
 
 </manifest>
