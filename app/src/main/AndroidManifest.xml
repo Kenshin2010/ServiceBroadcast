@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.manroid.serviceex">
+
+    <uses-permission
+        android:name="android.permission.BATTERY_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".receiver.receiver2.Main5Activity"></activity>
+        <activity android:name=".receiver.receiver1.Main4Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".jobservice.Main3Activity" />
+        <activity android:name=".foreground.Main2Activity">
+
+        </activity>
+        <activity android:name=".handler.MainActivity" />
+
+        <service
+            android:name=".handler.MsgService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".foreground.MyForeGroundService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".receiver.receiver1.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.manroid.serviceex" />
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>
